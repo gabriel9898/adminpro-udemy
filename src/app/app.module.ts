@@ -5,7 +5,7 @@ import { NgModule } from "@angular/core";
 import { APP_ROUTES } from "./app.routes";
 
 //Modulos Personalizadas
-import { PagesModule } from "./pages/page.module";
+import { PagesModule } from "./pages/pages.module";
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
