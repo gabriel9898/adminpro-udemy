@@ -40,6 +40,7 @@
     "object-literal-key-quotes": [true, "as-needed"],
     "object-literal-sort-keys": false,
     "ordered-imports": false,
+    "prefer-const": false,
     "quotemark": [false, "single"],
     "trailing-comma": false,
     "no-conflicting-lifecycle": true,
