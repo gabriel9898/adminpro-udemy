@@ -8,12 +8,15 @@ import { Graficas1Component } from "./graficas1/graficas1.component";
 import { AccoutSettingsComponent } from "./accout-settings/accout-settings.component";
 import { PromesasComponent } from "./promesas/promesas.component";
 import { RxjsComponent } from "./rxjs/rxjs.component";
-import { LoginGuardGuard } from "../services/guards/login-guard.guard";
+
 import { ProfileComponent } from "./profile/profile.component";
 import { UsuariosComponent } from "./usuarios/usuarios.component";
 import { HospitalesComponent } from "./hospitales/hospitales.component";
 import { MedicosComponent } from "./medicos/medicos.component";
 import { MedicoComponent } from "./medicos/medico.component";
+import { BusquedaComponent } from "./busqueda/busqueda.component";
+
+import { AdminGuard, LoginGuardGuard } from "../services/service.index";
 
 const pagesRoutes: Routes = [
   {
@@ -52,10 +55,17 @@ const pagesRoutes: Routes = [
         component: ProfileComponent,
         data: { titulo: "Perfil Usuario" }
       },
+      {
+        path: "busqueda/:termino",
+        component: BusquedaComponent,
+        data: { titulo: "Buscador" }
+      },
+
       //mantenimientos
       {
         path: "usuarios",
         component: UsuariosComponent,
+        canActivate: [AdminGuard],
         data: { titulo: "Mantenimiento de Usuarios" }
       },
       {

@@ -27,9 +27,7 @@ export class ProfileComponent implements OnInit {
       this.usuario.email = usuario.email;
     }
 
-    this._usuarioService.actualizarUsuario(this.usuario).subscribe(resp => {
-      console.log(resp);
-    });
+    this._usuarioService.actualizarUsuario(this.usuario).subscribe(resp => {});
   }
 
   seleccionImagen(archivo: File) {
