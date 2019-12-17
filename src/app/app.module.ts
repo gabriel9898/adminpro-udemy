@@ -16,18 +16,27 @@ import { HttpClientModule } from "@angular/common/http";
 
 // servicios
 import { ServiceModule } from "./services/service.module";
+import { PagesComponent } from "./pages/pages.component";
+import { SharedModule } from "./shared/shared.module";
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, RegisterComponent],
+  declarations: [
+    AppComponent,
+    LoginComponent,
+    RegisterComponent,
+    PagesComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     APP_ROUTES,
-    PagesModule,
+    // PagesModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    ServiceModule
+    ServiceModule,
+    //asdasd
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
